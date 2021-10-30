@@ -9,13 +9,13 @@ package comandero;
  *
  * @author frang
  */
-public class menuItem {
+public class Producto {
     
     int id;
     String nombre;
     float precio;
 
-    public menuItem(int id, String nombre, float precio) {
+    public Producto(int id, String nombre, float precio) {
         this.id = id;
         this.nombre = nombre;
         this.precio = precio;

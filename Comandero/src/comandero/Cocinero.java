@@ -9,7 +9,7 @@ package comandero;
  *
  * @author frang
  */
-public class Cocinero extends User {
+public class Cocinero extends Usuario {
 
     public Cocinero(String nombre, String email, String password) {
         super(nombre, email, password);

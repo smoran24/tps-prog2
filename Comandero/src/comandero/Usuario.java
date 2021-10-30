@@ -12,25 +12,25 @@ package comandero;
 
 import java.util.Scanner;
 
-public abstract class User {
+public abstract class Usuario {
     private String nombre;
     private String email;
-    private String password;
-    public boolean loggedIn;    
+    private String contrasenia;
+    public boolean conectado;    
 
-    public User(String nombre, String email, String password) {
+    public Usuario(String nombre, String email, String password) {
         this.nombre = nombre;
         this.email = email;
-        this.password = password;
-        this.loggedIn = false;
+        this.contrasenia = password;
+        this.conectado = false;
     }
 
     public String getNombre() {
         return nombre;
     }
 
-    public String getPassword() {
-        return password;
+    public String getContrasenia() {
+        return contrasenia;
     }
     
     

@@ -15,8 +15,8 @@ import java.util.Scanner;
 public class Comandero {
 
     static Scanner sc = new Scanner(System.in);
-    static ArrayList<User> usersArray = new ArrayList<>();
-    static User usuario = null;
+    static ArrayList<Usuario> usersArray = new ArrayList<>();
+    static Usuario usuario = null;
 
     public static void main(String[] args) {
 
@@ -44,12 +44,12 @@ public class Comandero {
         Mozo mozo = new Mozo("Mozo", "mozo@email.com", "mozo123");
         usersArray.add(mozo);
         
-        Menu carta = new Menu();
+        Carta carta = new Carta();
         
-        menuItem item1 = new menuItem(1, "Pizza", 150.0f);
-        menuItem item2 = new menuItem(2, "Empanadas", 250.0f);
-        menuItem item3 = new menuItem(3, "Lomo", 125.5f);
-        menuItem item4 = new menuItem(4, "Hamburguesa", 95.9f);
+        Producto item1 = new Producto(1, "Pizza", 150.0f);
+        Producto item2 = new Producto(2, "Empanadas", 250.0f);
+        Producto item3 = new Producto(3, "Lomo", 125.5f);
+        Producto item4 = new Producto(4, "Hamburguesa", 95.9f);
         
         carta.addItem(item1);
         carta.addItem(item2);
@@ -65,7 +65,7 @@ public class Comandero {
     
     public static void registrarUsuario(){   
         String nombreU, emailU, passwordU, confirmacion;
-        User newUser = null;
+        Usuario newUser = null;
         int tipoU;
         
         System.out.println("Ingrese el tipo de usuario:");
@@ -102,19 +102,19 @@ public class Comandero {
         usersArray.add(newUser);
     }
         
-    public static User iniciarSesion(){
+    public static Usuario iniciarSesion(){
         // AGREGAR VALIDAR Y TRY CATCH
         
         String nombreU, passwordU;
-        User usuario = null;
+        Usuario usuario = null;
         
         System.out.println("Ingrese nombre de usuario");
         nombreU = sc.nextLine();
         
-        for (User user: usersArray){
+        for (Usuario user: usersArray){
             if (nombreU.equals(user.getNombre())){
                 usuario = user;
-                usuario.loggedIn = true;
+                usuario.conectado = true;
             } 
         }
         
@@ -124,7 +124,7 @@ public class Comandero {
             System.out.println("Ingrese contraseña");
             passwordU = sc.nextLine();
 
-            if (!passwordU.equals(usuario.getPassword())){
+            if (!passwordU.equals(usuario.getContrasenia())){
                 usuario = null;
                 System.out.println("Contraseña incorrecta");
             } else {
@@ -137,7 +137,7 @@ public class Comandero {
     
     public static void cerrarSesion(){
         System.out.println("¡Hasta luego, " + usuario.getNombre() + "!");
-        usuario.loggedIn = false;
+        usuario.conectado = false;
         usuario = null;
     }
     

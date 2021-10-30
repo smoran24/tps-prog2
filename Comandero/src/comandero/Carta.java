@@ -11,17 +11,17 @@ import java.util.ArrayList;
  *
  * @author frang
  */
-public class Menu {
-    static ArrayList<menuItem> itemsArray = new ArrayList<>();
+public class Carta {
+    static ArrayList<Producto> itemsArray = new ArrayList<>();
 
-    public Menu() {
+    public Carta() {
     }
     
-    public void addItem(menuItem item){
+    public void addItem(Producto item){
         itemsArray.add(item);
     }
 
-    public void removeItem(menuItem item){
+    public void removeItem(Producto item){
         itemsArray.remove(item);
     }
     
@@ -31,7 +31,7 @@ public class Menu {
         System.out.println("Carta del Restaurant");
         System.out.println("");
         
-        for (menuItem item: itemsArray){
+        for (Producto item: itemsArray){
             item.mostrar();
         }
         

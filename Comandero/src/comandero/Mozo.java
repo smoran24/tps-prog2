@@ -11,9 +11,9 @@ import java.util.ArrayList;
  *
  * @author frang
  */
-public class Mozo extends User {
+public class Mozo extends Usuario {
     
-    Menu menu;
+    Carta menu;
     ArrayList<Comanda> comandasArray = new ArrayList<>();
 
     public Mozo(String nombre, String email, String password) {
@@ -25,7 +25,7 @@ public class Mozo extends User {
         System.out.println("¡Bienvenido al piso, " + this.getNombre() + "!");
     }
     
-    public void setMenu(Menu menu){
+    public void setMenu(Carta menu){
         this.menu = menu;
     }
     
