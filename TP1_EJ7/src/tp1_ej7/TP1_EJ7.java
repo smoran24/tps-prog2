@@ -27,13 +27,13 @@ public class TP1_EJ7 {
             nPiso=in.nextInt();
             in.nextLine(); //EVITA QUE SALTEE EL SIGUIENTE NEXTLINE
             Piso inm1 = new Piso(nPiso, dir, mCuad, antig);
-            precio=inm1.calcularValorPiso();
+            precio=inm1.calcularValor();
         }else{
             System.out.println("Ingrese el numero de ventanas del local:");
             nVentanas=in.nextInt();
             in.nextLine(); //EVITA QUE SALTEE EL SIGUIENTE NEXTLINE
             Local inm1 = new Local(nVentanas, dir, mCuad, antig);
-            precio=inm1.calcularValorLocal();
+            precio=inm1.calcularValor();
         }
         System.out.println("El valor del inmueble es de: $"+precio);
         

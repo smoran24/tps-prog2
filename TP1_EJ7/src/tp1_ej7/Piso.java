@@ -11,7 +11,7 @@ public class Piso extends Inmueble{
         this.precio = 5300000.0f;
     }
 
-    public float calcularValorPiso(){
+    public float calcularValor(){
         float valorFinal;
         valorFinal=this.precio;
         if (this.antiguedad<15){

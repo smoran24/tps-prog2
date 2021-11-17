@@ -10,8 +10,8 @@ public class Local extends Inmueble{
         this.numVentanas = numVentanas;
         this.precio = 3900000.0f;
     }
-
-    public float calcularValorLocal(){
+    
+    public float calcularValor(){
         float valorFinal;
         valorFinal=this.precio;
         if (this.antiguedad<15){

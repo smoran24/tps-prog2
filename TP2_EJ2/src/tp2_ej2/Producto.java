@@ -1,6 +1,6 @@
 
 package tp2_ej2;
-//import java.util.ArrayList;
+import java.util.ArrayList;
 
 public class Producto {
     
@@ -34,7 +34,7 @@ public class Producto {
     public void setStock(int stock) {
         this.stock = stock;
     }
-    /*
+    
     public static void listarProductos(ArrayList <Producto> arrayProducts) {
         for(Producto miProducto : arrayProducts){ //for each
             if (miProducto.stock < 10) {
@@ -44,6 +44,6 @@ public class Producto {
             } 
         } 
     }
-    */
+    
 }
 
