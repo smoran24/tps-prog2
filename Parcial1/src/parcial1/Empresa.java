@@ -8,14 +8,14 @@ public class Empresa {
     public void Agregar(Celular cel){
         celulares.add(cel);
     }
-    public void Listar(Integer celNum){
+    public void Listar(int celNum){
        /* boolean busqueda;
         busqueda=celulares.contains(celNum);
         if (busqueda==false){
             System.out.println("No se encontró celular");
         }*/
        for (Celular cel : celulares) {
-           if (cel.nroserie==celNum){
+           if (celNum == cel.nroserie){
                cel.MostrarInfo();
            }
         }
